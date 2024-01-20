@@ -1,24 +1,61 @@
-  <figure class="card">
-    <div class="card__emoji">{%IMAGE%}{%IMAGE%}</div>
-    <div class="card__title-box">
-      <h2 class="card__title">{%PRODUCTNAME%}</h2>
+
+<figure
+  style="
+    background: white;
+    box-shadow: 0 2rem 6rem 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 5rem;
+    transform: skewX(-20deg);
+    display: flex;
+    transition: all 0.5s;
+  "
+>
+  <div
+    style="
+      font-size: 5.5rem;
+      line-height: 1.2;
+      padding: 1.5rem 6rem 0.5rem 1.5rem;
+      letter-spacing: -4rem;
+      transform: skewX(20deg);
+    "
+  >
+    {%IMAGE%} {%IMAGE%}
+  </div>
+  <div
+    style="
+      background: linear-gradient(to bottom, #9be15d, #00e3ae);
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      padding: 0 3rem;
+    "
+  >
+    <h2
+      style="
+        font-family: Megrim;
+        color: white;
+        font-size: 3.25rem;
+        transform: skewX(20deg);
+      "
+    >
+      {%PRODUCTNAME%}
+    </h2>
+  </div>
+
+  <div style="display: flex">
+    <div class="card__detail-box {%NOT_ORGANIC%}">
+      <h6 class="card__detail card__detail--organic">Organic!</h6>
     </div>
 
-    <div class="card__details">
-      <div class="card__detail-box {%NOT_ORGANIC%}">
-          <h6 class="card__detail card__detail--organic">Organic!</h6>
-      </div>
-
-      <div class="card__detail-box">
-        <h6 class="card__detail">{%QUANTITY%} per 📦</h6>
-      </div>
-        
-      <div class="card__detail-box">
-        <h6 class="card__detail card__detail--price">{%PRICE%}€</h6>
-      </div>
+    <div class="card__detail-box">
+      <h6 class="card__detail">{%QUANTITY%} per 📦</h6>
     </div>
 
-    <a class="card__link" href="/product?id={%ID%}">
-      <span>Detail <i class="emoji-right">👉</i></span>
-    </a>
-  </figure>
+    <div class="card__detail-box">
+      <h6 class="card__detail card__detail--price">{%PRICE%}€</h6>
+    </div>
+  </div>
+
+  <a class="card__link" href="/product?id={%ID%}">
+    <span>Detail <i class="emoji-right">👉</i></span>
+  </a>
+</figure>
